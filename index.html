@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Daily Routine Reminder</title>
+  <link rel="icon" href="icon.png">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3eee7;
+      color: #4e342e;
+      padding: 20px;
+    }
+    h1, h3 {
+      color: #3e2723;
+    }
+    form {
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: #d7ccc8;
+      border-radius: 10px;
+    }
+    input, button {
+      margin: 10px 5px;
+      padding: 8px;
+      border: 1px solid #a1887f;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    button {
+      background-color: #6d4c41;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #5d4037;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    li {
+      background-color: #efebe9;
+      margin-bottom: 8px;
+      padding: 10px;
+      border-radius: 6px;
+    }
+    .action-btn {
+      padding: 5px 8px;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      margin-left: 8px;
+      cursor: pointer;
+    }
+    .edit-btn {
+      background-color: #8d6e63; 
+    }
+    .edit-btn:hover {
+      background-color: #6d4c41;
+    }
+    .delete-btn {
+      background-color: #a1887f; 
+    }
+    .delete-btn:hover {
+      background-color: #8d6e63;
+    }
+  </style>
+</head>
+<body>
+  <h1>Daily Routine Reminder</h1>
+
+  <form id="routineForm">
+    <label>Start Time: <input type="time" id="startTime" required></label>
+    <label>End Time: <input type="time" id="endTime" required></label>
+    <label>Task: <input type="text" id="task" placeholder="e.g., Study" required></label>
+    <button type="submit">Add Routine</button>
+  </form>
+
+  <h3>Today's Routines</h3>
+  <ul id="routineList"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
